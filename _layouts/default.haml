@@ -1,0 +1,38 @@
+!!!strict
+%html{html_attrs}
+  %head
+    %meta{:'http-equiv' => "Content-Type", :content => "text/html; charset=utf-8"}
+    %meta{:name => "lang", :content => "en"}
+
+    %title
+      = page.title
+
+    %meta{:name => "description", :content => ""}
+    %meta{:name => "keywords", :content => ""}
+
+    %meta{:name => "copyright", :content => "Adam Stacoviak"}
+    %meta{:name => "author", :content => "Adam Stacoviak"}
+
+    %link{:type => "text/css", :href => "/stylesheets/site.css", :rel => "stylesheet", :media => "all"}
+
+    %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/plugins/jquery.tools.min.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/plugins/jquery.livequery.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/site.js"}
+
+    %meta{:name => "robots", :content => "index, follow"}
+    %meta{:name => "robots", :content => "noodp, noydir"}
+    %meta{:name => "googlebot", :content => "index, follow"}
+  %body
+    .wide
+      .narrow
+        .container
+          #header
+            %h1
+              %a{:href => "/"}
+                Adam Stacoviak
+            %h2
+              %a{:href => "/"}
+                rails front-end developer &amp; designer
+          #body
+            = content

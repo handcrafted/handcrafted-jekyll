@@ -1,0 +1,55 @@
+@import blueprint/reset
+@import compass/utilities
+@import border_radius, colors, forms, buttons, grid
+
+=base-font
+  font: 13px Arial, Helvetica, sans-serif
+
+// Base
+html,
+body
+  height: 100%
+  margin: 0 0 1px 0
+  padding: 0
+body
+  +base-font
+  background: #fff
+  color: #0d0d0d
+  
+// Because the reset doesn't do it
+ul
+  li
+    list-style: none
+h1, h2, h3, h4, h5, h6
+  font-weight: bold
+.clearfix
+  +clearfix
+
+// Links
+a
+  color: #006ac4
+  text-decoration: none
+  &:hover
+    color: green
+    text-decoration: underline
+  &:focus,
+  &:active
+    outline: none
+  &:visited
+
+#noscript
+  position: absolute
+  top: 0
+  left: 0
+  background: #fff
+  height: 100%
+  width: 100%
+  p
+    color: #555
+    font-family: Arial, Helvetica, Verdana, sans-serif
+    font-size: 26px
+    font-weight: normal
+    line-height: 1.8
+    margin-top: 150px
+    padding: 0 100px
+    text-align: center

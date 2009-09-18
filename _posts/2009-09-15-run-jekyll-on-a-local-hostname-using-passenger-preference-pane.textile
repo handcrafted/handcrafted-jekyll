@@ -1,0 +1,18 @@
+---
+layout: post
+title: Run Jekyll on a Local Hostname using Passenger Preference Pane
+---
+
+p(meta). Sunday - September 13, 2009 (Houston, TX)
+
+Steps:
+
+I've been using Passenger Preference Pane @RedCloth::VERSION@ ever since it was released to run our Rails apps in development. For those who may not be familiar with "Passenger Preference Pane":http://github.com/alloy/passengerpane - it is a preference pane for Mac OS X. If you want to contribute get the latest version, you can find "the source code on Github":http://github.com/alloy/passengerpane. It enables you to configure a Rails or Rack application in a matter of seconds. It also serves as a GUI for adding and managing hosts.
+
+<!-- cd /private/etc/hosts -->
+<script src="http://gist.github.com/187355.js"></script>
+
+<!-- cd /private/etc/apache2/passenger_pane_vhosts -->
+<script src="http://gist.github.com/187357.js"></script>
+
+<script src="http://gist.github.com/187362.js"></script>

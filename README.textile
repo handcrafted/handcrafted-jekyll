@@ -1,0 +1,14 @@
+h1. About
+
+This Jekyll setup is a work in progress, but it's getting there.
+
+h1. License
+
+The following directories and their contents are Copyright Adam Stacoviak. You may not reuse anything contained therein without my express written permission:
+
+* _posts/
+* images/
+
+Feel free to re-use the HTML, Sass and JavaScript - personally or commercially. If you do so, a link back to http://adamstacoviak.com is appreciated, but is not required.
+
+All other directories and files are MIT Licensed.

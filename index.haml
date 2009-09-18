@@ -1,0 +1,15 @@
+---
+layout: default
+title: Adam Stacoviak - Rails Front-end Developer &amp; Designer
+---
+
+%ul.posts
+  - site.posts.each do |post|
+    %li.post.hentry
+      %span.date
+        %a{ :href => post.url, :rel => "bookmark" }
+          %abbr.published{ :title => post.date.strftime("%Y-%m-%dT%H:%M:%S%z") }
+            = post.date.strftime("%d %B %Y")
+      %span.title.entry-title
+        %a{ :href => post.url, :rel => "bookmark" }
+          = post.title
