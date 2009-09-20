@@ -15,21 +15,22 @@
 //  @header
 
 #header
+  +row
   margin-top: 50px
-  position: relative
   h1, h2
-    display: inline-block
     font-size: 24px
     font-weight: normal
   h1
+    +grid(5)
     a
       color: #0d0d0d
       text-decoration: none
+      &:hover
+        text-decoration: underline
   h2
     font-size: 18px
-    position: absolute
-    bottom: 0
-    right: 0
+    +grid(5)
+    text-align: right
     a
       color: #aaa
       text-decoration: none

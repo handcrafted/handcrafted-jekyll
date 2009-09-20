@@ -93,10 +93,12 @@ a:focus, a:active { outline: none; }
 
 .container { margin: 0 auto; overflow: hidden; width: 800px; padding-bottom: 25px; }
 
-#header { margin-top: 50px; position: relative; }
-#header h1, #header h2 { display: inline-block; font-size: 24px; font-weight: normal; }
+#header { margin: 0 auto; overflow: hidden; width: 800px; margin-top: 50px; }
+#header h1, #header h2 { font-size: 24px; font-weight: normal; }
+#header h1 { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 380px; }
 #header h1 a { color: #0d0d0d; text-decoration: none; }
-#header h2 { font-size: 18px; position: absolute; bottom: 0; right: 0; }
+#header h1 a:hover { text-decoration: underline; }
+#header h2 { font-size: 18px; display: inline; float: left; margin: 0 10px; overflow: hidden; width: 380px; text-align: right; }
 #header h2 a { color: #aaa; text-decoration: none; }
 #header h2 a:hover { cursor: text; }
 
