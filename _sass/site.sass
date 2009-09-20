@@ -8,15 +8,17 @@
   margin-left: 120px
   width: 800px
 .container
-  +row
+  +grid-container
   padding-bottom: 25px
 
 //  -------------------------------------------
 //  @header
 
 #header
-  +row
+  +grid-container
   margin-top: 50px
+  position: relative
+  width: 100%
   h1, h2
     font-size: 24px
     font-weight: normal
@@ -28,8 +30,9 @@
       &:hover
         text-decoration: underline
   h2
-    font-size: 18px
     +grid(5)
+    +vertical-align("bottom")
+    font-size: 18px
     text-align: right
     a
       color: #aaa
@@ -38,6 +41,7 @@
         cursor: text
 
 #body
+  +grid-container
   margin-top: 50px
   p
     color: #444
@@ -45,100 +49,102 @@
     line-height: 1.5
     margin-bottom: 20px
 
-.posts
-  li
-    margin-bottom: 15px
-    span
-      display: inline-block
-      &.date
-        a
-          color: #777
-          text-decoration: none
-          &:hover
-            cursor: text
-      &.title
-        font-size: 16px
-        margin-left: 30px
-        a
-          color: #0d0d0d
-          text-decoration: none
-          &:hover
-            text-decoration: underline
-
-.post
-  h1
-    color: #000
-    font-size: 40px
-    line-height: 1.2
-    margin-bottom: 30px
-    a
-      color: inherit
-      &:hover
-        cursor: text
-        text-decoration: none
-  h2
-    border-top: 4px solid #cacaca
-    font-size: 20px
-    font-weight: bold
-    margin: 20px 0
-    padding-top: 15px
-  h3
-    font-size: 16px
-    font-weight: bold
-    margin-bottom: 10px
-  h4, h5, h6
-    font-size: 14px
-    font-weight: bold
-    margin-bottom: 10px
-  p
-    color: #444
-    font-family: Verdana
-    font-size: 14px
-    line-height: 1.5
-    margin-bottom: 20px
-  ul
-    margin-bottom: 20px
-    padding-left: 20px
+.mod
+  & >.posts, & > .post
+    +grid-full
+  .posts
     li
+      margin-bottom: 15px
+      span
+        display: inline-block
+        &.date
+          a
+            color: #777
+            text-decoration: none
+            &:hover
+              cursor: text
+        &.title
+          font-size: 16px
+          margin-left: 30px
+          a
+            color: #0d0d0d
+            text-decoration: none
+            &:hover
+              text-decoration: underline
+  .post
+    h1
+      color: #000
+      font-size: 40px
+      line-height: 1.2
+      margin-bottom: 30px
+      a
+        color: inherit
+        &:hover
+          cursor: text
+          text-decoration: none
+    h2
+      border-top: 4px solid #cacaca
+      font-size: 20px
+      font-weight: bold
+      margin: 20px 0
+      padding-top: 15px
+    h3
+      font-size: 16px
+      font-weight: bold
+      margin-bottom: 10px
+    h4, h5, h6
+      font-size: 14px
+      font-weight: bold
+      margin-bottom: 10px
+    p
       color: #444
+      font-family: Verdana
       font-size: 14px
       line-height: 1.5
-      list-style: disc
-  .gist
-    margin-bottom: 20px
-    padding: 24px 0
-    .gist-file
-      border: none
-      margin: 0
-      position: relative
-      .gist-data
-        background: none
-        border: 1px solid #a3a3a3
-        font-size: 13px
-        pre
-          padding: 0 !important
-        .line
-          line-height: 24px
-          padding: 0 8px
-          &.even
-            background: #cce0f8
-      .gist-meta
-        position: absolute
-        top: -23px
-        right: 0
-        background: #ccc
-        background: rgba(0,0,0,0.2)
+      margin-bottom: 20px
+    ul
+      margin-bottom: 20px
+      padding-left: 20px
+      li
         color: #444
-        font-family: Arial, Helvetica, verdana, sans-serif
-        font-size: 12px
-        line-height: 24px
-        padding: 0 10px
-        a
-          color: #000
-          font-weight: bold
-          padding: 0
-          &:visited
+        font-size: 14px
+        line-height: 1.5
+        list-style: disc
+    .gist
+      margin-bottom: 20px
+      padding: 24px 0
+      .gist-file
+        border: none
+        margin: 0
+        position: relative
+        .gist-data
+          background: none
+          border: 1px solid #a3a3a3
+          font-size: 13px
+          pre
+            padding: 0 !important
+          .line
+            line-height: 24px
+            padding: 0 8px
+            &.even
+              background: #cce0f8
+        .gist-meta
+          position: absolute
+          top: -23px
+          right: 0
+          background: #ccc
+          background: rgba(0,0,0,0.2)
+          color: #444
+          font-family: Arial, Helvetica, verdana, sans-serif
+          font-size: 12px
+          line-height: 24px
+          padding: 0 10px
+          a
             color: #000
-          &:first-child
-            text-transform: capitalize
-            margin-left: 25px
+            font-weight: bold
+            padding: 0
+            &:visited
+              color: #000
+            &:first-child
+              text-transform: capitalize
+              margin-left: 25px

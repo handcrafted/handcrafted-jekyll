@@ -26,21 +26,26 @@
   margin = 0 !grid_gutter_width / 2
   overflow: hidden
 
-=row
-  margin: 0 auto
-  overflow: hidden
-  width = !grid_width
+=grid-container(!nested = "")
+  @if !nested == "nested"
+    +clearfix
+    margin: 0 auto
+    width = !grid_width
+  @else
+    margin = 0 -!grid_gutter_width / 2
+    display: inline-block
+    width: auto
 
-=row_nested
-  margin = 0 -!grid_gutter_width / 2
-  display: inline-block
-  width: auto
+=grid-full
+  +grid(!grid_columns)
 
-.row
-  +row
-.grids
-  +row_nested
+.grid_container
+  +grid-container
+.grid_container_nested
+  +grid-container("nested")
 .grid
+  &.full
+    +grid-full
   &.one
     +grid(1)
   &.two

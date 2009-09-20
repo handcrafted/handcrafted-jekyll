@@ -11,21 +11,6 @@ table { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inhe
 
 a img { border: none; }
 
-form fieldset { border: none; }
-form legend { display: none; }
-form .field { margin-bottom: 12px; }
-form .form_actions { border-top: 1px solid #e7e7e7; margin-top: 10px; padding: 10px 0; }
-form label { display: block; font-size: 14px; font-weight: bold; margin-bottom: 5px; }
-form input[type="text"], form input[type="password"] { font-size: 16px; padding: 6px 8px; width: 60%; }
-form textarea { font-size: 16px; height: 120px; padding: 6px 8px; width: 60%; }
-form input[type="text"], form input[type="password"], form textarea { font-family: Arial, Helvetica, sans-serif; }
-form input[type="submit"] { margin: 0; }
-form input[type="text"].blur { color: #999; }
-form .field.first_last > div { display: inline; float: left; width: 27%; }
-form .field.first_last > div:first-child { margin-right: 40px; }
-form .field.first_last > div input[type=text] { width: 100%; }
-form .field.check_box label, form .field.radio_button label { display: inline; }
-
 form .form_actions input[type="submit"], form .form_actions a { font-size: 12px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); background: #222 url(/images/button_overlay.png) repeat-x; border-bottom: 1px solid rgba(0,0,0,0.25); color: #fff; cursor: pointer; display: inline-block; padding: 5px 10px; position: relative; text-decoration: none; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5); text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
 form .form_actions input[type="submit"]:visited, form .form_actions a:visited { font-size: 12px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); background: #222 url(/images/button_overlay.png) repeat-x; border-bottom: 1px solid rgba(0,0,0,0.25); color: #fff; cursor: pointer; display: inline-block; padding: 5px 10px; position: relative; text-decoration: none; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5); text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
 form .form_actions input[type="submit"]:hover, form .form_actions a:hover { background-color: #111; color: #fff; }
@@ -54,10 +39,27 @@ form .form_actions input[type="submit"].yellow:visited, form .form_actions a.yel
 form .form_actions input[type="submit"].yellow:hover, form .form_actions a.yellow:hover { background-color: #fc9200; }
 form .form_actions input[type="submit"] { border: none; margin-right: 5px; padding: 3px 8px; position: relative; top: 1px; }
 
-.row { margin: 0 auto; overflow: hidden; width: 800px; }
+form fieldset { border: none; }
+form legend { display: none; }
+form .field { margin-bottom: 12px; }
+form .form_actions { border-top: 1px solid #e7e7e7; margin-top: 10px; padding: 10px 0; }
+form label { display: block; font-size: 14px; font-weight: bold; margin-bottom: 5px; }
+form input[type="text"], form input[type="password"] { font-size: 16px; padding: 6px 8px; width: 60%; }
+form textarea { font-size: 16px; height: 120px; padding: 6px 8px; width: 60%; }
+form input[type="text"], form input[type="password"], form textarea { font-family: Arial, Helvetica, sans-serif; }
+form input[type="submit"] { margin: 0; }
+form input[type="text"].blur { color: #999; }
+form .field.first_last > div { display: inline; float: left; width: 27%; }
+form .field.first_last > div:first-child { margin-right: 40px; }
+form .field.first_last > div input[type=text] { width: 100%; }
+form .field.check_box label, form .field.radio_button label { display: inline; }
 
-.grids { margin: -10px; display: inline-block; width: auto; }
+.grid_container { margin: -10px; display: inline-block; width: auto; }
 
+.grid_container_nested { overflow: hidden; display: inline-block; margin: 0 auto; width: 800px; }
+.grid_container_nested { display: block; }
+
+.grid.full { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 780px; }
 .grid.one { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 60px; }
 .grid.two { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 140px; }
 .grid.three { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 220px; }
@@ -91,44 +93,44 @@ a:focus, a:active { outline: none; }
 
 .narrow { margin-left: 120px; width: 800px; }
 
-.container { margin: 0 auto; overflow: hidden; width: 800px; padding-bottom: 25px; }
+.container { margin: -10px; display: inline-block; width: auto; padding-bottom: 25px; }
 
-#header { margin: 0 auto; overflow: hidden; width: 800px; margin-top: 50px; }
+#header { margin: -10px; display: inline-block; width: auto; margin-top: 50px; position: relative; width: 100%; }
 #header h1, #header h2 { font-size: 24px; font-weight: normal; }
 #header h1 { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 380px; }
 #header h1 a { color: #0d0d0d; text-decoration: none; }
 #header h1 a:hover { text-decoration: underline; }
-#header h2 { font-size: 18px; display: inline; float: left; margin: 0 10px; overflow: hidden; width: 380px; text-align: right; }
+#header h2 { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 380px; position: absolute; bottom: 0; font-size: 18px; text-align: right; }
 #header h2 a { color: #aaa; text-decoration: none; }
 #header h2 a:hover { cursor: text; }
 
-#body { margin-top: 50px; }
+#body { margin: -10px; display: inline-block; width: auto; margin-top: 50px; }
 #body p { color: #444; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
 
-.posts li { margin-bottom: 15px; }
-.posts li span { display: inline-block; }
-.posts li span.date a { color: #777; text-decoration: none; }
-.posts li span.date a:hover { cursor: text; }
-.posts li span.title { font-size: 16px; margin-left: 30px; }
-.posts li span.title a { color: #0d0d0d; text-decoration: none; }
-.posts li span.title a:hover { text-decoration: underline; }
-
-.post h1 { color: #000; font-size: 40px; line-height: 1.2; margin-bottom: 30px; }
-.post h1 a { color: inherit; }
-.post h1 a:hover { cursor: text; text-decoration: none; }
-.post h2 { border-top: 4px solid #cacaca; font-size: 20px; font-weight: bold; margin: 20px 0; padding-top: 15px; }
-.post h3 { font-size: 16px; font-weight: bold; margin-bottom: 10px; }
-.post h4, .post h5, .post h6 { font-size: 14px; font-weight: bold; margin-bottom: 10px; }
-.post p { color: #444; font-family: Verdana; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
-.post ul { margin-bottom: 20px; padding-left: 20px; }
-.post ul li { color: #444; font-size: 14px; line-height: 1.5; list-style: disc; }
-.post .gist { margin-bottom: 20px; padding: 24px 0; }
-.post .gist .gist-file { border: none; margin: 0; position: relative; }
-.post .gist .gist-file .gist-data { background: none; border: 1px solid #a3a3a3; font-size: 13px; }
-.post .gist .gist-file .gist-data pre { padding: 0 !important; }
-.post .gist .gist-file .gist-data .line { line-height: 24px; padding: 0 8px; }
-.post .gist .gist-file .gist-data .line.even { background: #cce0f8; }
-.post .gist .gist-file .gist-meta { position: absolute; top: -23px; right: 0; background: #ccc; background: rgba(0,0,0,0.2); color: #444; font-family: Arial, Helvetica, verdana, sans-serif; font-size: 12px; line-height: 24px; padding: 0 10px; }
-.post .gist .gist-file .gist-meta a { color: #000; font-weight: bold; padding: 0; }
-.post .gist .gist-file .gist-meta a:visited { color: #000; }
-.post .gist .gist-file .gist-meta a:first-child { text-transform: capitalize; margin-left: 25px; }
+.mod >.posts, .mod > .post { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 780px; }
+.mod .posts li { margin-bottom: 15px; }
+.mod .posts li span { display: inline-block; }
+.mod .posts li span.date a { color: #777; text-decoration: none; }
+.mod .posts li span.date a:hover { cursor: text; }
+.mod .posts li span.title { font-size: 16px; margin-left: 30px; }
+.mod .posts li span.title a { color: #0d0d0d; text-decoration: none; }
+.mod .posts li span.title a:hover { text-decoration: underline; }
+.mod .post h1 { color: #000; font-size: 40px; line-height: 1.2; margin-bottom: 30px; }
+.mod .post h1 a { color: inherit; }
+.mod .post h1 a:hover { cursor: text; text-decoration: none; }
+.mod .post h2 { border-top: 4px solid #cacaca; font-size: 20px; font-weight: bold; margin: 20px 0; padding-top: 15px; }
+.mod .post h3 { font-size: 16px; font-weight: bold; margin-bottom: 10px; }
+.mod .post h4, .mod .post h5, .mod .post h6 { font-size: 14px; font-weight: bold; margin-bottom: 10px; }
+.mod .post p { color: #444; font-family: Verdana; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
+.mod .post ul { margin-bottom: 20px; padding-left: 20px; }
+.mod .post ul li { color: #444; font-size: 14px; line-height: 1.5; list-style: disc; }
+.mod .post .gist { margin-bottom: 20px; padding: 24px 0; }
+.mod .post .gist .gist-file { border: none; margin: 0; position: relative; }
+.mod .post .gist .gist-file .gist-data { background: none; border: 1px solid #a3a3a3; font-size: 13px; }
+.mod .post .gist .gist-file .gist-data pre { padding: 0 !important; }
+.mod .post .gist .gist-file .gist-data .line { line-height: 24px; padding: 0 8px; }
+.mod .post .gist .gist-file .gist-data .line.even { background: #cce0f8; }
+.mod .post .gist .gist-file .gist-meta { position: absolute; top: -23px; right: 0; background: #ccc; background: rgba(0,0,0,0.2); color: #444; font-family: Arial, Helvetica, verdana, sans-serif; font-size: 12px; line-height: 24px; padding: 0 10px; }
+.mod .post .gist .gist-file .gist-meta a { color: #000; font-weight: bold; padding: 0; }
+.mod .post .gist .gist-file .gist-meta a:visited { color: #000; }
+.mod .post .gist .gist-file .gist-meta a:first-child { text-transform: capitalize; margin-left: 25px; }
