@@ -36,3 +36,12 @@
                 a nice jekyll starting point
           #body
             = content
+    .wide#footer
+      .narrow
+        .container
+          %p
+            %a{:href => "http://gethandcrafted.com/", :rel => "home"}<
+              Handcrafted
+            &ndash;
+            = "All Content Copyright &copy; 2008 - #{Time.now.year} Handcrafted, LLC"
+          %p All Trademarks and Copyrights remain the property of their respective owners.

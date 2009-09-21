@@ -54,10 +54,9 @@ form .field.first_last > div:first-child { margin-right: 40px; }
 form .field.first_last > div input[type=text] { width: 100%; }
 form .field.check_box label, form .field.radio_button label { display: inline; }
 
-.grid_container { margin: -10px; display: inline-block; width: auto; }
-
-.grid_container_nested { overflow: hidden; display: inline-block; margin: 0 auto; width: 800px; }
-.grid_container_nested { display: block; }
+.grid_container { overflow: hidden; display: inline-block; margin: 0 auto; width: 800px; }
+.grid_container { display: block; }
+.grid_container.nested { margin: 0; margin-left: -10px; margin-right: -10px; display: inline-block; width: auto; }
 
 .grid.full { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 780px; }
 .grid.one { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 60px; }
@@ -70,7 +69,7 @@ form .field.check_box label, form .field.radio_button label { display: inline; }
 .grid.eight { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 620px; }
 .grid.nine { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 700px; }
 .grid.ten { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 780px; }
-.grid p.indent { text-indent: -99999px; }
+.grid .example p { background: #333 !important; border: 1px solid #000 !important; color: #fff !important; line-height: 70px !important; text-align: center !important; }
 
 html, body { height: 100%; margin: 0 0 1px 0; padding: 0; }
 
@@ -93,9 +92,11 @@ a:focus, a:active { outline: none; }
 
 .narrow { margin-left: 120px; width: 800px; }
 
-.container { margin: -10px; display: inline-block; width: auto; padding-bottom: 25px; }
+.container { overflow: hidden; display: inline-block; margin: 0 auto; width: 800px; padding-bottom: 25px; }
+.container { display: block; }
 
-#header { margin: -10px; display: inline-block; width: auto; margin-top: 50px; position: relative; width: 100%; }
+#header { overflow: hidden; display: inline-block; margin: 0 auto; width: 800px; margin-top: 50px; position: relative; width: 100%; }
+#header { display: block; }
 #header h1, #header h2 { font-size: 24px; font-weight: normal; }
 #header h1 { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 380px; }
 #header h1 a { color: #0d0d0d; text-decoration: none; }
@@ -104,10 +105,15 @@ a:focus, a:active { outline: none; }
 #header h2 a { color: #aaa; text-decoration: none; }
 #header h2 a:hover { cursor: text; }
 
-#body { margin: -10px; display: inline-block; width: auto; margin-top: 50px; }
+#footer { min-height: 100px; height: auto !important; height: 100px; background-attachment: fixed; border-top: 1px solid #cacaca; padding: 30px 0; }
+#footer p { font-size: 12px; line-height: 1.5; }
+
+#body { overflow: hidden; display: inline-block; margin: 0 auto; width: 800px; margin-top: 50px; }
+#body { display: block; }
 #body p { color: #444; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
 
 .mod >.posts, .mod > .post { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 780px; }
+.mod .posts { min-height: 450px; height: auto !important; height: 450px; }
 .mod .posts li { margin-bottom: 15px; }
 .mod .posts li span { display: inline-block; }
 .mod .posts li span.date a { color: #777; text-decoration: none; }
@@ -115,7 +121,8 @@ a:focus, a:active { outline: none; }
 .mod .posts li span.title { font-size: 16px; margin-left: 30px; }
 .mod .posts li span.title a { color: #0d0d0d; text-decoration: none; }
 .mod .posts li span.title a:hover { text-decoration: underline; }
-.mod .post h1 { color: #000; font-size: 40px; line-height: 1.2; margin-bottom: 30px; }
+.mod .post h1, .mod .post h2, .mod .post h3, .mod .post h4, .mod .post h5, .mod .post h6 { color: #000; }
+.mod .post h1 { font-size: 40px; line-height: 1.2; margin-bottom: 30px; }
 .mod .post h1 a { color: inherit; }
 .mod .post h1 a:hover { cursor: text; text-decoration: none; }
 .mod .post h2 { border-top: 4px solid #cacaca; font-size: 20px; font-weight: bold; margin: 20px 0; padding-top: 15px; }

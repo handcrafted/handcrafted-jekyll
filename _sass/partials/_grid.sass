@@ -28,21 +28,23 @@
 
 =grid-container(!nested = "")
   @if !nested == "nested"
+    margin: 0
+    margin-left = -!grid_gutter_width / 2
+    margin-right = -!grid_gutter_width / 2
+    display: inline-block
+    width: auto
+  @else
     +clearfix
     margin: 0 auto
     width = !grid_width
-  @else
-    margin = 0 -!grid_gutter_width / 2
-    display: inline-block
-    width: auto
 
 =grid-full
   +grid(!grid_columns)
 
 .grid_container
   +grid-container
-.grid_container_nested
-  +grid-container("nested")
+  &.nested
+    +grid-container("nested")
 .grid
   &.full
     +grid-full
@@ -66,5 +68,10 @@
     +grid(9)
   &.ten
     +grid(10)
-  p.indent
-    text-indent: -99999px
+  .example
+    p
+      background: #333 !important
+      border: 1px solid #000 !important
+      color: #fff !important
+      line-height: 70px !important
+      text-align: center !important

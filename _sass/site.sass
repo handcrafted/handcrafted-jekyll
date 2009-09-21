@@ -40,6 +40,15 @@
       &:hover
         cursor: text
 
+#footer
+  +min-height("100px")
+  background-attachment: fixed
+  border-top: 1px solid #cacaca
+  padding: 30px 0
+  p
+    font-size: 12px
+    line-height: 1.5
+
 #body
   +grid-container
   margin-top: 50px
@@ -53,6 +62,7 @@
   & >.posts, & > .post
     +grid-full
   .posts
+    +min-height("450px")
     li
       margin-bottom: 15px
       span
@@ -72,8 +82,9 @@
             &:hover
               text-decoration: underline
   .post
-    h1
+    h1, h2, h3, h4, h5, h6
       color: #000
+    h1
       font-size: 40px
       line-height: 1.2
       margin-bottom: 30px
