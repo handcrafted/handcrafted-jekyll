@@ -45,6 +45,8 @@
   +grid-container
   &.nested
     +grid-container("nested")
+    // Overriding the overflow: hidden inherited from +grid-container
+    overflow: auto
 .grid
   &.full
     +grid-full
