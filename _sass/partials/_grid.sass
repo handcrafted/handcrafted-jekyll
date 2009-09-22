@@ -29,8 +29,8 @@
 =grid-container(!nested = nil)
   @if !nested == "nested"
     margin: 0
-    margin-left = -!grid_gutter_width / 2
-    margin-right = -!grid_gutter_width / 2
+      left = -!grid_gutter_width / 2
+      right = -!grid_gutter_width / 2
     display: inline-block
     width: auto
   @else
