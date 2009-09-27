@@ -54,22 +54,22 @@ form .field.first_last > div:first-child { margin-right: 40px; }
 form .field.first_last > div input[type=text] { width: 100%; }
 form .field.check_box label, form .field.radio_button label { display: inline; }
 
-.grid_container { overflow: hidden; display: inline-block; margin: 0 auto; width: 800px; }
-.grid_container { display: block; }
-.grid_container.nested { margin: 0; margin-left: -10px; margin-right: -10px; display: inline-block; width: auto; overflow: auto; }
-
-.grid.full { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 780px; }
-.grid.one { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 60px; }
-.grid.two { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 140px; }
-.grid.three { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 220px; }
-.grid.four { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 300px; }
-.grid.five { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 380px; }
-.grid.six { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 460px; }
-.grid.seven { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 540px; }
-.grid.eight { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 620px; }
-.grid.nine { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 700px; }
-.grid.ten { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 780px; }
-.grid .example p { background: #333 !important; border: 1px solid #000 !important; color: #fff !important; line-height: 70px !important; text-align: center !important; }
+.grid_container { margin: 0 auto; overflow: hidden; width: 800px; }
+.grid_container.nested { margin: 0; margin-left: -10px; margin-right: -10px; display: inline-block; width: auto; }
+.grid_container .grid.one { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 60px; }
+.grid_container .grid.two { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 140px; }
+.grid_container .grid.three { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 220px; }
+.grid_container .grid.four { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 300px; }
+.grid_container .grid.five { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 380px; }
+.grid_container .grid.six { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 460px; }
+.grid_container .grid.seven { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 540px; }
+.grid_container .grid.eight { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 620px; }
+.grid_container .grid.nine { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 700px; }
+.grid_container .grid.ten { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 780px; }
+.grid_container .grid.eleven { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 860px; }
+.grid_container .grid.twelve { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 940px; }
+.grid_container .grid.full { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 780px; }
+.grid_container .example p { background: #333 !important; border: 1px solid #000 !important; color: #fff !important; line-height: 70px !important; text-align: center !important; }
 
 html, body { height: 100%; margin: 0 0 1px 0; padding: 0; }
 
@@ -92,11 +92,9 @@ a:focus, a:active { outline: none; }
 
 .narrow { margin-left: 120px; width: 800px; }
 
-.container { overflow: hidden; display: inline-block; margin: 0 auto; width: 800px; padding-bottom: 25px; }
-.container { display: block; }
+.container { margin: 0 auto; overflow: hidden; width: 800px; padding-bottom: 25px; }
 
-#header { overflow: hidden; display: inline-block; margin: 0 auto; width: 800px; margin-top: 50px; position: relative; width: 100%; }
-#header { display: block; }
+#header { margin: 0 auto; overflow: hidden; width: 800px; margin-top: 50px; position: relative; width: 100%; }
 #header h1, #header h2 { font-size: 24px; font-weight: normal; }
 #header h1 { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 380px; }
 #header h1 a { color: #0d0d0d; text-decoration: none; }
@@ -108,8 +106,7 @@ a:focus, a:active { outline: none; }
 #footer { min-height: 100px; height: auto !important; height: 100px; background-attachment: fixed; border-top: 1px solid #cacaca; padding: 30px 0; }
 #footer p { font-size: 12px; line-height: 1.5; }
 
-#body { overflow: hidden; display: inline-block; margin: 0 auto; width: 800px; margin-top: 50px; }
-#body { display: block; }
+#body { margin: 0 auto; overflow: hidden; width: 800px; margin-top: 50px; }
 #body p { color: #444; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
 
 .mod >.posts, .mod > .post { display: inline; float: left; margin: 0 10px; overflow: hidden; width: 780px; }

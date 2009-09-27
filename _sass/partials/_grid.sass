@@ -1,80 +1,8 @@
-//  ----------------------------------------------------------------------------
-//  Foundation Grid
-//  Author: Adam Stacoviak
-//  Version: 1.0
-//  ----------------------------------------------------------------------------
-//  Foundation Grid is based on Tyler Tate's 1kb CSS Grid project (1kbgrid.com)
-//  ----------------------------------------------------------------------------
-//  Default Grid: 960px wide, 12 columns at 60px each with a 20px gutter
-//
-//  Update the 4 variables below to change the properties of your grid.
-//  You can use 1kbgrid.com as a guide in determining your grid setup.
+//  The following locks in our grid coordinates
 
 !grid_width ||= 800px
 !grid_columns ||= 10
 !grid_pixels ||= 60px
 !grid_gutter_width ||= 20px
 
-=grid(!grid_columns)
-  +column
-  @if !grid_columns == 1
-    width = !grid_pixels
-  @else
-    width = (!grid_columns * !grid_pixels) + (!grid_columns * !grid_gutter_width - !grid_gutter_width)
-
-=column
-  +float-left
-  margin = 0 !grid_gutter_width / 2
-  overflow: hidden
-
-=grid-container(!nested = nil)
-  @if !nested == "nested"
-    margin: 0
-      left = -!grid_gutter_width / 2
-      right = -!grid_gutter_width / 2
-    display: inline-block
-    width: auto
-  @else
-    +clearfix
-    margin: 0 auto
-    width = !grid_width
-
-=grid-full
-  +grid(!grid_columns)
-
-.grid_container
-  +grid-container
-  &.nested
-    +grid-container("nested")
-    // Overriding the overflow: hidden inherited from +grid-container
-    overflow: auto
-.grid
-  &.full
-    +grid-full
-  &.one
-    +grid(1)
-  &.two
-    +grid(2)
-  &.three
-    +grid(3)
-  &.four
-    +grid(4)
-  &.five
-    +grid(5)
-  &.six
-    +grid(6)
-  &.seven
-    +grid(7)
-  &.eight
-    +grid(8)
-  &.nine
-    +grid(9)
-  &.ten
-    +grid(10)
-  .example
-    p
-      background: #333 !important
-      border: 1px solid #000 !important
-      color: #fff !important
-      line-height: 70px !important
-      text-align: center !important
+@import grid-coordinates/grid
